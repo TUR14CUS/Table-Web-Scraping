@@ -1,39 +1,47 @@
-# Web Scraping and Data Extraction Scripts
+# Web Scraping and Data Export Readme
 
-These Python scripts utilize the Selenium library to scrape football headlines from "The Sun" website (https://www.thesun.co.uk/sport/football/). The data is then processed and exported to CSV files. Three versions of the script are provided: `extract-data.py`, `automation.py`, and `headless.py`.
+This Python script is designed to scrape data from a website using Selenium and export the collected data into a CSV file. The script is configured to work in both regular and headless modes, providing flexibility based on the user's preferences. Below is a guide on using and understanding the script.
 
-## 1. `extract-data.py`
+## Features:
 
-This script extracts football headlines data from the website, specifically the title, subtitle, and link. The extracted data is then saved to a CSV file named `headline.csv`.
+1. **Web Scraping:**
+   - Utilizes Selenium to navigate to a specified web page and collect data from elements with the class "teaser__copy-container."
 
-### Usage:
-1. Set the `path` variable to the path of your ChromeDriver executable.
-2. Run the script.
-3. Provide the required information when prompted.
-4. Check the generated `headline.csv` file for the extracted data.
+2. **Data Export:**
+   - Gathers titles, subtitles, and links from the scraped data.
+   - Exports the collected data into a CSV file named `football_headlines_MMDDYYYY.csv`, where MMDDYYYY represents the current date.
 
-## 2. `automation.py`
+3. **Headless Mode:**
+   - Supports both regular and headless modes for running the script.
 
-This script automates the process of extracting football headlines and exporting the data to a CSV file. It includes the current date in the CSV filename to differentiate between runs.
+## Usage Instructions:
 
-### Usage:
-1. Set the `path` variable to the path of your ChromeDriver executable.
-2. Run the script.
-3. The script will generate a CSV file with a filename like `football_headlines_MMDDYYYY.csv`.
-4. Check the file in the same directory as the script.
+1. **Prerequisites:**
+   - Ensure you have the Chrome WebDriver installed. You can download it from [ChromeDriver - WebDriver for Chrome](https://sites.google.com/chromium.org/driver/).
+   - Install the required Python libraries using:
+     ```bash
+     pip install selenium pandas
+     ```
 
-## 3. `headless.py`
+2. **Configuration:**
+   - Set the `web_url` variable to the target website URL.
+   - Update the `chrome_driver_path` variable with the path to your Chrome WebDriver executable.
 
-Similar to `automation.py`, this script runs in headless mode, meaning the browser is not visibly launched. It extracts football headlines and saves the data to a CSV file named `headline-headless.csv`.
+3. **Run the Script:**
+   - Execute the script using a Python interpreter. You can run the script with or without headless mode, depending on your preference.
 
-### Usage:
-1. Set the `path` variable to the path of your ChromeDriver executable.
-2. Run the script.
-3. Check the generated `headline-headless.csv` file for the extracted data.
+     ```bash
+     python script_name.py
+     ```
 
-### Important Notes:
-- Ensure you have the required dependencies installed (`selenium` and `pandas`). You can install them using `pip install selenium pandas`.
-- Make sure to have the ChromeDriver executable compatible with your Chrome browser version.
-- Use responsibly and be aware of website terms of service regarding web scraping.
+4. **Review the Output:**
+   - The script will create a CSV file named `football_headlines_MMDDYYYY.csv` in the same directory where the script is located.
 
-Feel free to customize these scripts based on your specific needs.
+5. **Adjustments:**
+   - Customize the script based on your specific requirements, such as modifying the XPath or adding additional data points.
+
+6. **Notes:**
+   - Use this script responsibly and in compliance with the website's terms of service.
+   - Check for updates to ChromeDriver if issues arise due to browser updates.
+
+Feel free to adapt and extend this script for other websites or additional functionalities. If you encounter any issues or have specific requirements, consider reviewing the Selenium documentation for further guidance: [Selenium Documentation](https://www.selenium.dev/documentation/en/).
