@@ -2,6 +2,17 @@
 
 This Python script is designed to scrape data from a website using Selenium and export the collected data into a CSV file. The script is configured to work in both regular and headless modes, providing flexibility based on the user's preferences. Below is a guide on using and understanding the script.
 
+## Table of Contents
+1. [Features](#features)
+2. [Usage Instructions](#usage-instructions)
+3. [Prerequisites](#prerequisites)
+4. [Configuration](#configuration)
+5. [Run the Script](#run-the-script)
+6. [Review the Output](#review-the-output)
+7. [Adjustments](#adjustments)
+8. [Notes](#notes)
+9. [License](#license)
+
 ## Features:
 
 1. **Web Scraping:**
@@ -44,4 +55,5 @@ This Python script is designed to scrape data from a website using Selenium and 
    - Use this script responsibly and in compliance with the website's terms of service.
    - Check for updates to ChromeDriver if issues arise due to browser updates.
 
-Feel free to adapt and extend this script for other websites or additional functionalities. If you encounter any issues or have specific requirements, consider reviewing the Selenium documentation for further guidance: [Selenium Documentation](https://www.selenium.dev/documentation/en/).
+## License
+This project is licensed under the [MIT License](LICENSE).
